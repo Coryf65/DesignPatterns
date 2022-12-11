@@ -15,7 +15,7 @@ Notes for different design patterns in programming. This aplies to almost any la
 2. Open-Closed Principle
 
 	- Open for extension closed for modification
-	- we shouldn't need to modify existing code. we can use inheritence
+	- we shouldn't need to modify existing code. we can use inheritence, with interfaces
 	- in our code we get asked to add more filters on a products page. We are going to use the "Specification Pattern" (not gang of four but considered an enterprise pattern).
 
 3. Liskov Substitution Principle
