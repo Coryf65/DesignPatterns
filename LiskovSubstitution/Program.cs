@@ -11,7 +11,8 @@ square.Width = 4;
 Console.WriteLine($"a square {square} has an Area of '{Area(square)}'");
 
 // So we should be able to change the Square to a Rectangle class
-Rectangle rs = new();
+// looks at the the setter and sees we have an override so it the compiler will use the newest member
+Rectangle rs = new Square();
 rs.Width = 4;
 Console.WriteLine($"a square {rs} has an Area of '{Area(rs)}'");
 Console.WriteLine("And we can see this is not working as expected....");
@@ -23,12 +24,12 @@ Console.WriteLine("And we can see this is not working as expected....");
 public class Square : Rectangle
 {
 	// a bad example do not do it this way
-	public new int Width
+	public override int Width
 	{
 		set { base.Width = base.Height = value; }
 	}
 
-	public new int Height
+	public override int Height
 	{
 		set { base.Width = base.Height = value; }
 	}
@@ -40,8 +41,8 @@ public class Square : Rectangle
 /// </summary>
 public class Rectangle
 {
-	public int Width { get; set; }
-	public int Height { get; set; }
+	public virtual int Width { get; set; }
+	public virtual int Height { get; set; }
 
 	public Rectangle()
 	{
