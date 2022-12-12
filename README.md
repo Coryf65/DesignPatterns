@@ -20,6 +20,11 @@ Notes for different design patterns in programming. This aplies to almost any la
 
 3. Liskov Substitution Principle
 
+	- which describes the fundamental nature of data abstraction, and is used in type theory (see subtyping) and in object-oriented programming (see inheritance).
+	Her work was recognized with the 2008 Turing Award, the highest distinction in computer science. (named after [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov))
+
+	- we should be able to substitute a base type for a sub type.
+
 4. Interface Segregation Principle
 
 5. Dependency Inversion Principle
